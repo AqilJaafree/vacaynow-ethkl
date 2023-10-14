@@ -1,0 +1,9 @@
+{
+    "description": "dummy website", 
+    "image": "ipfs://QmNPqfWdCRaCa5tRuVYkPP8Wkh4Y8AT9uMntJA1127zKaH/1.jpg", 
+    "name": "Dummy website#1",
+    "attributes": [     {
+        "trait_type": "website_url", 
+        "value": "https://dummy-websites.vercel.app/"
+      } ]
+  }
