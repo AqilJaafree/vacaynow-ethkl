@@ -14,6 +14,9 @@ contract MyWEB is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
         Ownable(initialOwner)
     {}
 
+    function _baseURI() internal pure override returns (string memory) { 
+        return "ipfs://QmWyZxVyD4sZi2mYh7yJkcQD8ji4kTP36VmdXM22e8BDcE"; 
+    }
 
     function pause() public onlyOwner {
         _pause();
@@ -27,6 +30,8 @@ contract MyWEB is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
     }
+
+
 
 
     function _update(address to, uint256 tokenId, address auth)
@@ -43,6 +48,12 @@ contract MyWEB is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
     {
         super._increaseBalance(account, value);
     }
+
+     function mintNFT(address to) public {
+        uint256 tokenId = _nextTokenId++;
+        _safeMint(to, tokenId);
+    }
+
 
     function supportsInterface(bytes4 interfaceId)
         public
