@@ -45,8 +45,8 @@ const Home = () => {
         <a href="#" className="box l border border-solid border-black">
           Home
         </a>
-        <a href="#" className="box l">
-          Showcase
+        <a href="/workspace" className="box l" >
+          Workspace
         </a>
         <button className="box l" onClick={requestAccount}>
           Connect Wallet
