@@ -26,6 +26,19 @@ const Home = () => {
     }
   }
 
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    if (!walletAddress) {
+      alert("Please connect your wallet first.");
+      return;
+    }
+
+    // Handle form submission here
+    // Add your logic for handling the form submission
+    console.log("Form submitted:", website);
+  };
+
   return (
     <div>
       <div className="flex justify-end">
@@ -40,16 +53,17 @@ const Home = () => {
         </button>
       </div>
       <div className="boxcenter">
-        <form>
+        <form onSubmit={submitHandler}>
           <input
             type="text"
             value={website}
             onChange={(e) => setWebsite(e.target.value)}
             placeholder="Enter your website"
           />
+
           <button type="submit">Submit</button>
         </form>
-        <h3>Wallet Address: {walletAddress}</h3> {}
+        <h3>Wallet Address: {walletAddress}</h3>
       </div>
     </div>
   );
