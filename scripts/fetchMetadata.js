@@ -12,3 +12,7 @@ async function fetchMetadata(uri) {
 }
 
 module.exports = fetchMetadata;
+// Assume fetchTokenURIs is defined in the same file or imported from another file
+fetchTokenURIs(1, 10).then(tokenUris => {
+    tokenUris.forEach(uri => fetchMetadata(uri));
+});
