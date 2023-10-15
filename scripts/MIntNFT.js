@@ -16,14 +16,14 @@ const signer = new ethers.Wallet(privateKey, provider);
 
 // Get contract ABI and address
 const abi = require("../artifacts/contracts/MyWEB.sol/MyWEB.json").abi;
-const contractAddress = "0xA4819F71CfE21C0Fa22E6db99B736d4B811F6B0B";
+const contractAddress = "0x31485558544Eb4A2F2B4B82117a5c756242685F3";
 
 // Create a contract instance
 const myWebContract = new ethers.Contract(contractAddress, abi, signer);
 
 // Get the NFT Metadata IPFS URL
 const tokenUri =
-  "https://gateway.pinata.cloud/ipfs/QmWyZxVyD4sZi2mYh7yJkcQD8ji4kTP36VmdXM22e8BDcE ";
+  "https://gateway.pinata.cloud/ipfs/QmW5CEoFpCMVXRwq8SP5YMAq5A6H4gFxWUBYd4g9tGbBXb ";
 
 // Call mintNFT function
 async function mintNFT() {

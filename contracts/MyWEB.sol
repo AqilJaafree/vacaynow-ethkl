@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract MyWEB is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
     uint256 private _nextTokenId;
@@ -15,7 +16,7 @@ contract MyWEB is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
     {}
 
     function _baseURI() internal pure override returns (string memory) { 
-        return "ipfs://QmWyZxVyD4sZi2mYh7yJkcQD8ji4kTP36VmdXM22e8BDcE"; 
+        return "ipfs://QmW5CEoFpCMVXRwq8SP5YMAq5A6H4gFxWUBYd4g9tGbBXb"; 
     }
 
     function pause() public onlyOwner {
@@ -31,7 +32,9 @@ contract MyWEB is ERC721, ERC721Enumerable, ERC721Pausable, Ownable {
         _safeMint(to, tokenId);
     }
 
-
+    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+    return string(abi.encodePacked(_baseURI(), Strings.toString(tokenId)));
+}
 
 
     function _update(address to, uint256 tokenId, address auth)
