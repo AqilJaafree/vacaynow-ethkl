@@ -42,12 +42,12 @@ const Home = () => {
   return (
     <div>
       <div className="flex justify-end">
-        <a href="#" className="box l border border-solid border-black">
+        <button href="#" className="box l border border-solid border-black">
           Home
-        </a>
-        <a href="/workspace" className="box l" >
+        </button>
+        <button href="/workspace" className="box l" >
           Workspace
-        </a>
+        </button>
         <button className="box l" onClick={requestAccount}>
           Connect Wallet
         </button>
