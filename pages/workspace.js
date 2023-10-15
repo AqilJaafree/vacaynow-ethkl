@@ -22,7 +22,7 @@ const Workspace = () => {
                         id="tokenId"
                         name="tokenId"
                         value={inputValue}
-                        placeholder="Please paste your token ID here 😊"
+                        placeholder="Find your website here 😊"
                         onChange={handleInputChange}
                         className="w-[1152px] h-[50px] border-[5px] border-solid border-black bg-[#D9D9D9] rounded-[50px] p-3 font-mono"
                     />
