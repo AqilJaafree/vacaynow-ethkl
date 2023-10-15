@@ -60,4 +60,6 @@ body, html {
 
 .boxcenter button:hover {
   background-color: #8746B6;
+body {
+  background-color: #8746b6;
 }

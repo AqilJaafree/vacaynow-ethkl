@@ -1,3 +1,10 @@
 {
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "css.validate": false,
+  "editor.inlineSuggest.enabled": true
+}
+{
     "solidity.compileUsingRemoteVersion": "v0.8.20+commit.a1b79de6"
 }
